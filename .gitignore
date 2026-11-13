@@ -1,0 +1,5 @@
+# Temporary & scratch assets
+stitch_assets/
+.DS_Store
+Thumbs.db
+*.tmp

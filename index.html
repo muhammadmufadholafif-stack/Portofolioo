@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html class="dark" lang="id">
+<head>
+  <!-- Metadata Standar & SEO -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>Muhammad Mufadhol Afif (Fanskey) | Portofolio Siswa SMK TKJ</title>
+  <meta name="description" content="Portofolio resmi Muhammad Mufadhol Afif (Fanskey) - Siswa SMK jurusan Teknik Komputer dan Jaringan (TKJ) SMK Islam 1 Blitar. Network Engineer & Full-Stack Web Developer.">
+  <meta name="keywords" content="Muhammad Mufadhol Afif, Fanskey, Portofolio TKJ, SMK Islam 1 Blitar, Pemilos, OSAKI, FansStore, Weather Fanskey, FansTrack, MikroTik, Debian 12">
+  <meta name="author" content="Muhammad Mufadhol Afif">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Muhammad Mufadhol Afif (Fanskey) | Portofolio TKJ">
+  <meta property="og:description" content="Koleksi proyek website skala produksi, aplikasi mobile Flutter, dan arsitektur jaringan MikroTik & Linux Server.">
+  <meta property="og:image" content="images/foto-profil.jpg">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet Vanilla CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       CANVAS 3D CYBER NETWORK & PARTICLES (VANILLA 60 FPS)
+       ========================================================================= -->
+  <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- =========================================================================
+       1. TOP NAVBAR
+       ========================================================================= -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Identitas Brand -->
+      <a href="#beranda" class="nav-brand" aria-label="Ke halaman beranda">
+        <div class="nav-brand-logo">A</div>
+        <div class="nav-brand-text">
+          <span id="nav-brand-name">Afif</span>
+          <span class="nav-brand-badge">TKJ</span>
+        </div>
+      </a>
+
+      <!-- Menu Navigasi Desktop -->
+      <div class="nav-controls">
+        <nav class="nav-menu" id="nav-menu" aria-label="Navigasi Utama">
+          <a href="#beranda" class="nav-link active">Beranda</a>
+          <a href="#tentang" class="nav-link">Tentang</a>
+          <a href="#skill" class="nav-link">Skill</a>
+          <a href="#project" class="nav-link">Proyek</a>
+          <a href="#sertifikat" class="nav-link" id="nav-link-sertifikat">Sertifikat</a>
+          <a href="#kontak" class="nav-link">Kontak</a>
+        </nav>
+
+        <!-- Status Pill: Online -->
+        <div class="nav-status-pill">
+          <span class="pulse-dot"></span>
+          <span id="nav-status-text">Available</span>
+        </div>
+
+        <!-- Tombol Pengubah Mode Gelap/Terang -->
+        <button type="button" class="theme-toggle-btn" id="theme-toggle" aria-label="Ganti tema gelap atau terang" title="Ganti Tema">
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+            <line x1="12" y1="21" x2="12" y2="23" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+            <line x1="1" y1="12" x2="3" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+            <line x1="21" y1="12" x2="23" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         2. HERO SECTION (APP-STYLE NATIVE LAYOUT)
+         ========================================================================= -->
+    <section class="section hero-section" id="beranda">
+      <div class="container">
+        <!-- Live Status Ticker (Stitch Mobile Ticker) -->
+        <div class="mobile-live-ticker reveal-item">
+          <div class="ticker-left">
+            <span class="pulse-dot"></span>
+            <span class="ticker-text">ONLINE // SMK ISLAM 1 BLITAR</span>
+          </div>
+          <span class="ticker-badge">TKJ SPECIALIST</span>
+        </div>
+
+        <div class="hero-grid">
+          <!-- Kolom Foto & Visual Card (Tampil di atas pada layar HP) -->
+          <div class="hero-visual-col reveal-item">
+            <div class="cyber-terminal-card">
+              <div class="terminal-header">
+                <div class="terminal-dots">
+                  <span class="t-dot t-red"></span>
+                  <span class="t-dot t-yellow"></span>
+                  <span class="t-dot t-green"></span>
+                </div>
+                <span class="terminal-title">afif@dev-station:~$</span>
+              </div>
+              <div class="terminal-body">
+                <div class="hero-avatar-container">
+                  <div class="hologram-ring ring-1"></div>
+                  <div class="hologram-ring ring-2"></div>
+                  <div class="hero-avatar-wrapper">
+                    <img id="hero-avatar" class="hero-avatar" src="" alt="Foto Profil Muhammad Mufadhol Afif">
+                  </div>
+                  <div class="floating-cyber-pill pill-top">
+                    <span class="pill-dot green"></span> RouterOS
+                  </div>
+                  <div class="floating-cyber-pill pill-bottom">
+                    <span class="pill-dot cyan"></span> Debian 12
+                  </div>
+                </div>
+                <div class="terminal-identity">
+                  <h2 class="terminal-name">Muhammad Mufadhol Afif</h2>
+                  <p class="terminal-sub">Fanskey • XII TKJ</p>
+                </div>
+
+                <div class="terminal-code-block">
+                  <div><span class="code-green">afif@smk-tkj:~$</span> status --stack</div>
+                  <div><span class="code-cyan">Web:</span> Next.js, Vercel, Vanilla JS</div>
+                  <div><span class="code-cyan">Net:</span> MikroTik RouterOS, VLAN</div>
+                  <div><span class="code-dim">&gt;&gt; 7+ live projects online</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kolom Teks & CTA -->
+          <div class="hero-content reveal-item">
+            <div class="hero-tagline-badge">
+              <span class="sparkle">⚡</span>
+              <span id="hero-tagline-badge-text">Network Engineer &amp; Full-Stack Web Developer</span>
+            </div>
+
+            <h1 class="hero-name" id="hero-name">
+              Halo, Saya <span class="text-gradient">Afif</span>
+            </h1>
+            
+            <!-- Typewriter Role Effect -->
+            <div class="hero-role-wrapper">
+              <span class="role-prefix">Fokus: </span>
+              <span class="typewriter-text" id="typewriter-text"></span>
+              <span class="typewriter-cursor">|</span>
+            </div>
+
+            <p class="hero-tagline" id="hero-tagline">Memuat Tagline...</p>
+
+            <div class="hero-actions">
+              <a href="#project" class="btn btn-primary">
+                <span>Lihat Proyek Live</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+              <a href="#kontak" class="btn btn-outline">Hubungi Saya</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Stats Bar -->
+        <div class="hero-stats-bar reveal-item" id="hero-stats-container"></div>
+
+        <!-- =====================================================================
+             3D DATACENTER SERVER RACK SHOWCASE (DI BAWAH PROFIL)
+             Diadopsi 1:1 dari Portal Resmi TKJ SMEKISA (tkj.smkislam1blitar.sch.id)
+             ===================================================================== -->
+        <div class="server-3d-stage-wrapper reveal-item">
+          <div class="server-3d-stage-header">
+            <div class="stage-title-wrap">
+              <span class="pulse-dot"></span>
+              <span class="stage-title">CORE DATACENTER // 3D SERVER RACK</span>
+              <span class="stage-badge">TKJ ARCHITECTURE</span>
+            </div>
+            <span class="stage-hint">👆 Drag mouse / usap layar untuk memutar 360°</span>
+          </div>
+
+          <div class="server-3d-stage-grid">
+            <!-- 3D Canvas Area (Besar & Interaktif) -->
+            <div class="server-3d-canvas-wrap">
+              <div id="server-3d-canvas-container" class="server-3d-canvas-container" title="Drag mouse atau usap layar untuk memutar 3D Server Rack"></div>
+            </div>
+
+            <!-- Panel Spesifikasi Sistem di Samping 3D Rack -->
+            <div class="server-3d-info-panel">
+              <div class="server-info-card">
+                <div class="info-card-header">
+                  <span class="info-card-dot green"></span>
+                  <span class="info-card-name">Debian 12 Bookworm Storage</span>
+                  <span class="info-card-tag">8x Hot-Swap SAS</span>
+                </div>
+                <p class="info-card-desc">Cluster penyimpanan dan server basis data utama dengan lampu indikator aktivitas I/O read/write real-time.</p>
+              </div>
+
+              <div class="server-info-card">
+                <div class="info-card-header">
+                  <span class="info-card-dot cyan"></span>
+                  <span class="info-card-name">MikroTik RouterOS CCR2004</span>
+                  <span class="info-card-tag">24x Gigabit RJ45</span>
+                </div>
+                <p class="info-card-desc">Routing dinamis OSPF, segmentasi VLAN trunking, manajemen bandwidth, dan failover otomatis antar-jaringan.</p>
+              </div>
+
+              <div class="server-info-card">
+                <div class="info-card-header">
+                  <span class="info-card-dot emerald"></span>
+                  <span class="info-card-name">Dual Turbine Active Cooling</span>
+                  <span class="info-card-tag">36°C Optimal</span>
+                </div>
+                <p class="info-card-desc">Sistem pendingin ganda dengan pemantauan suhu otomatis dan ventilasi terpadu pada sasis rak.</p>
+              </div>
+
+              <!-- Live Telemetry Status -->
+              <div class="server-live-telemetry">
+                <div class="telem-box">
+                  <span class="telem-label">SYSTEM UPTIME</span>
+                  <span class="telem-value text-emerald">99.98%</span>
+                </div>
+                <div class="telem-box">
+                  <span class="telem-label">THROUGHPUT</span>
+                  <span class="telem-value">10 Gbps SFP+</span>
+                </div>
+                <div class="telem-box">
+                  <span class="telem-label">NODE LOCATION</span>
+                  <span class="telem-value">Blitar, ID</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. TENTANG SAYA (ABOUT ME)
+         ========================================================================= -->
+    <section class="section section-alt" id="tentang">
+      <div class="container">
+        <div class="section-header reveal-item">
+          <span class="section-tag">Biodata Teknis</span>
+          <h2 class="section-title">Tentang Saya</h2>
+          <p class="section-subtitle">Latar belakang pendidikan, kejuruan TKJ, dan kapabilitas rekayasa software &amp; jaringan yang saya tekuni.</p>
+        </div>
+
+        <div class="about-card reveal-item">
+          <p class="about-bio" id="about-bio">Memuat deskripsi singkat...</p>
+
+          <div class="about-info-grid">
+            <div class="info-item">
+              <span class="info-label">Nama Lengkap</span>
+              <span class="info-value" id="about-nama-lengkap">Muhammad Mufadhol Afif</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Asal Sekolah</span>
+              <span class="info-value" id="about-sekolah">-</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Jurusan</span>
+              <span class="info-value" id="about-jurusan">-</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Status Siswa</span>
+              <span class="info-value text-emerald">Pelajar Aktif (Kelas XII)</span>
+            </div>
+          </div>
+
+          <div class="about-actions">
+            <a href="cv.pdf" download id="about-cv-btn" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download CV (Curriculum Vitae)</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. SKILL SECTION (COMPACT MATRICES)
+         ========================================================================= -->
+    <section class="section" id="skill">
+      <div class="container">
+        <div class="section-header reveal-item">
+          <span class="section-tag">Matriks Kompetensi</span>
+          <h2 class="section-title">Keahlian &amp; Tools</h2>
+          <p class="section-subtitle">Tingkat penguasaan perangkat keras jaringan, administrasi server Linux, serta pembuatan aplikasi web &amp; mobile.</p>
+        </div>
+
+        <div class="skills-grid" id="skills-container"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. PROJECT SECTION (SEMUA LIVE PROJECT VERCEL & GITHUB)
+         ========================================================================= -->
+    <section class="section section-alt" id="project">
+      <div class="container">
+        <div class="section-header reveal-item">
+          <span class="section-tag">Koleksi Karya Live</span>
+          <h2 class="section-title">Proyek Produksi</h2>
+          <p class="section-subtitle">Website aktif yang telah dideploy di Vercel, aplikasi seluler Flutter, dan arsitektur topologi jaringan.</p>
+        </div>
+
+        <!-- Filter Kategori Proyek -->
+        <div class="project-filter reveal-item">
+          <button type="button" class="filter-btn active" data-category="Semua">Semua (8)</button>
+          <button type="button" class="filter-btn" data-category="Web">Web Apps</button>
+          <button type="button" class="filter-btn" data-category="Mobile">Mobile Apps</button>
+          <button type="button" class="filter-btn" data-category="Networking">Jaringan</button>
+        </div>
+
+        <!-- Grid Kartu Proyek -->
+        <div class="projects-grid" id="projects-container"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. SERTIFIKAT & PRESTASI
+         ========================================================================= -->
+    <section class="section" id="sertifikat">
+      <div class="container">
+        <div class="section-header reveal-item">
+          <span class="section-tag">Pencapaian Teruji</span>
+          <h2 class="section-title">Sertifikasi &amp; Prestasi</h2>
+          <p class="section-subtitle">Bukti kompetensi pelatihan dan kejuaraan di bidang teknologi informasi.</p>
+        </div>
+
+        <div class="certificates-grid" id="certificates-container"></div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. KONTAK
+         ========================================================================= -->
+    <section class="section section-alt" id="kontak">
+      <div class="container">
+        <div class="section-header reveal-item">
+          <span class="section-tag">Saluran Komunikasi</span>
+          <h2 class="section-title">Mari Terhubung</h2>
+          <p class="section-subtitle">Punya kebutuhan setting jaringan MikroTik, instalasi server Linux, atau ingin berdiskusi pembuatan web?</p>
+        </div>
+
+        <div class="contact-card reveal-item">
+          <p class="contact-text">
+            Saya siap diajak berkolaborasi dalam proyek freelance, pembuatan sistem web, magang industri, maupun diskusi seputar infrastruktur IT.
+          </p>
+
+          <div class="contact-buttons-wrapper">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="contact-wa-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.34-.76-1.84-.2-.49-.4-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.61.19 1.16.17 1.6.1.49-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.3z"/>
+              </svg>
+              <span>WhatsApp Chat</span>
+            </a>
+
+            <a href="#" class="btn btn-outline" id="contact-email-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>Kirim Email</span>
+            </a>
+          </div>
+
+          <div class="social-links-wrapper">
+            <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon-btn" id="social-github" title="GitHub" aria-label="Profil GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon-btn" id="social-instagram" title="Instagram" aria-label="Profil Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       8. BOTTOM APP BAR (KHUSUS TAMPILAN HP SEPERTI APLIKASI NATIVE)
+       ========================================================================= -->
+  <nav class="bottom-app-bar" aria-label="Navigasi Bawah Mobile">
+    <a href="#beranda" class="bottom-tab-link active">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+      <span>Home</span>
+    </a>
+    <a href="#tentang" class="bottom-tab-link">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      <span>Profil</span>
+    </a>
+    <a href="#skill" class="bottom-tab-link">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+      <span>Skill</span>
+    </a>
+    <a href="#project" class="bottom-tab-link">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+      <span>Proyek</span>
+    </a>
+    <a href="#kontak" class="bottom-tab-link">
+      <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+      <span>Kontak</span>
+    </a>
+  </nav>
+
+  <!-- =========================================================================
+       9. FOOTER
+       ========================================================================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p id="footer-copyright">© 2026 Muhammad Mufadhol Afif. All rights reserved.</p>
+      <p style="font-family: var(--font-mono); font-size: 0.8rem;">
+        Dibangun dengan HTML5, CSS3, &amp; JavaScript Vanilla murni • Zero Frameworks.
+      </p>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODAL DETAIL PROYEK
+       ========================================================================= -->
+  <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button type="button" class="modal-close-btn" id="project-modal-close" aria-label="Tutup jendela detail">&times;</button>
+      
+      <div class="modal-img-wrapper">
+        <img id="modal-img" class="modal-img" src="" alt="Pratinjau Proyek">
+      </div>
+
+      <div class="modal-content">
+        <h3 class="modal-title" id="modal-title">Judul Proyek</h3>
+        <div class="project-tech-badges" id="modal-tags" style="margin-bottom: 16px;"></div>
+        <p class="modal-desc" id="modal-desc">Deskripsi lengkap proyek...</p>
+        <div class="modal-actions" id="modal-actions"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pemanggilan Script Vanilla & Three.js Offline -->
+  <script src="js/three.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/server3d.js"></script>
+</body>
+</html>
